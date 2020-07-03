@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Toko</string>
+    <string name="un">Username</string>
+    <string name="ps">Password</string>
+    <string name="si">Masuk</string>
+
 </resources>
