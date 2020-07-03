@@ -8,9 +8,11 @@
     </style>
     <style name="Login" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-       <item name="colorPrimary">@color/white</item>
-        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorPrimaryDark">@color/top</item>
         <item name="colorAccent">@color/white</item>
+        <item name="colorControlNormal">#444444</item>
+        <item name="colorControlActivated">#222222</item>
+        <item name="colorControlHighlight">#f44336</item>
     </style>
     <style name="Splash" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
