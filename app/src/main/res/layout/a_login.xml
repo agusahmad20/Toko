@@ -15,7 +15,7 @@
             android:layout_height="92dp"
             android:layout_gravity="center_horizontal"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_add" />
+            android:src="@drawable/android" />
 
         <Space
             android:layout_width="match_parent"
@@ -70,7 +70,7 @@
             android:layout_marginLeft="32dp"
             android:layout_marginTop="50dp"
             android:layout_marginRight="32dp"
-            android:background="#1181F6"
+            android:background="@color/colorPrimary"
             android:padding="14dp"
             android:text="@string/si"
             android:textColor="@color/white"
