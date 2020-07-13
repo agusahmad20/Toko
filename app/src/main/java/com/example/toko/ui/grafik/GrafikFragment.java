@@ -1,4 +1,4 @@
-package com.example.toko.ui.laporan;
+package com.example.toko.ui.grafik;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.toko.R;
 
-public class LaporanFragment extends Fragment {
-    private LaporanViewModel laporanViewModel;
+public class GrafikFragment extends Fragment {
+    private GrafikViewModel grafikViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        laporanViewModel =
-                ViewModelProviders.of(this).get(LaporanViewModel.class);
-        View root = inflater.inflate(R.layout.f_laporan, container, false);
-        final TextView textView = root.findViewById(R.id.text_laporan);
+        grafikViewModel =
+                ViewModelProviders.of(this).get(GrafikViewModel.class);
+        View root = inflater.inflate(R.layout.f_grafik, container, false);
+        final TextView textView = root.findViewById(R.id.text_grafik);
 
-        laporanViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        grafikViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

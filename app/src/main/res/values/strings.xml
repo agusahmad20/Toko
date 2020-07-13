@@ -3,6 +3,7 @@
     <string name="un">Username</string>
     <string name="ps">Password</string>
     <string name="si">Masuk</string>
+    <string name="so">Keluar</string>
 
     <string name="title_activity_home">Beranda</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -16,6 +17,7 @@
     <string name="menu_transaksi">Transaksi</string>
     <string name="menu_riwayat">Riwayat Transaksi</string>
     <string name="menu_pengaturan">Pengaturan</string>
+    <string name="menu_grafik">Grafik Penjualan</string>
     <string name="menu_laporan">Laporan</string>
 
 </resources>

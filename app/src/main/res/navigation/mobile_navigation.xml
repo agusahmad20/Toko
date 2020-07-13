@@ -24,6 +24,12 @@
         tools:layout="@layout/f_riwayat" />
 
     <fragment
+        android:id="@+id/nav_grafik"
+        android:name="com.example.toko.ui.grafik.GrafikFragment"
+        android:label="@string/menu_grafik"
+        tools:layout="@layout/f_grafik" />
+
+    <fragment
         android:id="@+id/nav_laporan"
         android:name="com.example.toko.ui.laporan.LaporanFragment"
         android:label="@string/menu_laporan"

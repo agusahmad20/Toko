@@ -1,8 +1,10 @@
 package com.example.toko;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -19,6 +21,9 @@ import androidx.appcompat.widget.Toolbar;
 public class Nav extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+    Preferences sharedPreferences;
+    NavigationView navigationView;
+    TextView nama,jabatan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +32,16 @@ public class Nav extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
+
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
+       // navigationView.setNavigationItemSelectedListener(this);
+        View headerView= navigationView.getHeaderView(0);
+
+        nama= headerView.findViewById(R.id.HeaderNama);
+        jabatan = headerView.findViewById(R.id.HeaderJabatan);
+        sharedPreferences = new Preferences(this);
+        nama.setText(sharedPreferences.getNama());
+        jabatan.setText(sharedPreferences.getJabatan());
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,7 +54,7 @@ public class Nav extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_transaksi, R.id.nav_riwayat,R.id.nav_laporan,R.id.nav_pengaturan)
+                R.id.nav_home, R.id.nav_transaksi, R.id.nav_riwayat,R.id.nav_grafik,R.id.nav_laporan,R.id.nav_pengaturan)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -60,4 +75,6 @@ public class Nav extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+
 }

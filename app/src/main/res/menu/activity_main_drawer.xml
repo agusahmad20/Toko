@@ -17,6 +17,11 @@
             android:icon="@drawable/nav_riwayat"
             android:title="@string/menu_riwayat" />
         <item
+            android:id="@+id/nav_grafik"
+            android:icon="@drawable/nav_laporan"
+            android:title="@string/menu_grafik" />
+
+        <item
             android:id="@+id/nav_laporan"
             android:icon="@drawable/nav_laporan"
             android:title="@string/menu_laporan" />
