@@ -1,4 +1,4 @@
-package com.example.toko.ui.transaksi;
+package com.example.toko.ui.barang;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,21 +11,20 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 
 import com.example.toko.R;
 
-public class TransaksiFragment extends Fragment {
-
-    private TransaksiViewModel galleryViewModel;
+public class BarangFragment extends Fragment {
+    private BarangViewModel grafikViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        galleryViewModel =
-                new ViewModelProvider(this).get(TransaksiViewModel.class);
-        View root = inflater.inflate(R.layout.f_transaksi, container, false);
-        final TextView textView = root.findViewById(R.id.text_gallery);
-        galleryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        grafikViewModel =
+                new ViewModelProvider(this).get(BarangViewModel.class);
+        View root = inflater.inflate(R.layout.f_barang, container, false);
+        final TextView textView = root.findViewById(R.id.text_barang);
+
+        grafikViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

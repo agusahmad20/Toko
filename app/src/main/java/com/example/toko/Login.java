@@ -57,9 +57,9 @@ public class Login extends AppCompatActivity {
     }
 
     public void saveData() {
-        sharedPreferences.saveSPString(sharedPreferences.NAMA, nama);
-        sharedPreferences.saveSPString(sharedPreferences.JABATAN, jabatan);
-        sharedPreferences.saveSPBoolean(sharedPreferences.LOGGED, true);
+        sharedPreferences.saveString(sharedPreferences.NAMA, nama);
+        sharedPreferences.saveString(sharedPreferences.JABATAN, jabatan);
+        sharedPreferences.saveBoolean(sharedPreferences.LOGGED, true);
     }
 
 }

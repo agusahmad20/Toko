@@ -15,19 +15,20 @@ public class Preferences {
     public Preferences(Context context){
         sp = context.getSharedPreferences(USER, Context.MODE_PRIVATE);
         spEditor = sp.edit();
+
     }
 
-    public void saveSPString(String keySP, String value){
+    public void saveString(String keySP, String value){
         spEditor.putString(keySP, value);
         spEditor.commit();
     }
 
-    public void saveSPInt(String keySP, int value){
+    public void saveInt(String keySP, int value){
         spEditor.putInt(keySP, value);
         spEditor.commit();
     }
 
-    public void saveSPBoolean(String keySP, boolean value){
+    public void saveBoolean(String keySP, boolean value){
         spEditor.putBoolean(keySP, value);
         spEditor.commit();
     }

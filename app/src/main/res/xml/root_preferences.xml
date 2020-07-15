@@ -1,0 +1,44 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="@string/akun">
+        <Preference
+            app:icon="@drawable/ic_username"
+            app:key="uname"
+            app:title="@string/uname" />
+        <Preference
+            app:icon="@drawable/ic_katasandi"
+            app:key="pass"
+            app:title="@string/pass" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/pembayaran">
+        <Preference
+        app:icon="@drawable/ic_pembayaran"
+        app:key="pembayaran"
+        app:title="@string/bayar" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/print">
+        <SwitchPreferenceCompat
+            android:icon="@drawable/ic_bluetooth"
+            app:key="bluetooth"
+            app:title="@string/bluetooth" />
+        <Preference
+            app:icon="@drawable/ic_print"
+            app:key="printer"
+            app:title="@string/printer" />
+        <Preference
+            app:icon="@drawable/ic_struk"
+            app:key="struk"
+            app:title="@string/struk" />
+    </PreferenceCategory>
+
+    <PreferenceCategory >
+        <Preference
+            app:icon="@drawable/ic_logout"
+            app:key="keluar"
+            app:title="@string/keluar" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

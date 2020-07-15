@@ -17,12 +17,13 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.preference.PreferenceFragmentCompat;
 
 public class Nav extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     Preferences sharedPreferences;
-    NavigationView navigationView;
+
     TextView nama,jabatan;
 
     @Override
@@ -33,15 +34,8 @@ public class Nav extends AppCompatActivity {
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
 
-        navigationView = (NavigationView) findViewById(R.id.nav_view);
-       // navigationView.setNavigationItemSelectedListener(this);
-        View headerView= navigationView.getHeaderView(0);
-
-        nama= headerView.findViewById(R.id.HeaderNama);
-        jabatan = headerView.findViewById(R.id.HeaderJabatan);
         sharedPreferences = new Preferences(this);
-        nama.setText(sharedPreferences.getNama());
-        jabatan.setText(sharedPreferences.getJabatan());
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,9 +47,15 @@ public class Nav extends AppCompatActivity {
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
+        View headerView= navigationView.getHeaderView(0);
+        nama= headerView.findViewById(R.id.HeaderNama);
+        jabatan = headerView.findViewById(R.id.HeaderJabatan);
+        nama.setText(sharedPreferences.getNama());
+        jabatan.setText(sharedPreferences.getJabatan());
+
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_transaksi, R.id.nav_riwayat,R.id.nav_grafik,R.id.nav_laporan,R.id.nav_pengaturan)
-                .setDrawerLayout(drawer)
+                R.id.nav_home, R.id.nav_transaksi, R.id.nav_riwayat,R.id.nav_barang,R.id.nav_pegawai,R.id.nav_grafik,R.id.nav_laporan,R.id.nav_pengaturan)
+                .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
@@ -76,5 +76,11 @@ public class Nav extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
+    public static class SettingsFragment extends PreferenceFragmentCompat {
+        @Override
+        public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+            setPreferencesFromResource(R.xml.root_preferences, rootKey);
+        }
+    }
 
 }

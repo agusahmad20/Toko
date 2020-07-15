@@ -1,17 +1,15 @@
-package com.example.toko.ui.home;
+package com.example.toko.ui.barang;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
-
+public class BarangViewModel extends ViewModel {
     private MutableLiveData<String> mText;
 
-    public HomeViewModel() {
+    public BarangViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is Beranda fragment");
-        mText.setValue("sadf");
+        mText.setValue("This is barang fragment");
     }
 
     public LiveData<String> getText() {

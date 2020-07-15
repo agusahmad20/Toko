@@ -24,6 +24,18 @@
         tools:layout="@layout/f_riwayat" />
 
     <fragment
+        android:id="@+id/nav_barang"
+        android:name="com.example.toko.ui.barang.BarangFragment"
+        android:label="@string/menu_barang"
+        tools:layout="@layout/f_barang" />
+
+    <fragment
+        android:id="@+id/nav_pegawai"
+        android:name="com.example.toko.ui.pegawai.PegawaiFragment"
+        android:label="@string/menu_pegawai"
+        tools:layout="@layout/f_pegawai" />
+
+    <fragment
         android:id="@+id/nav_grafik"
         android:name="com.example.toko.ui.grafik.GrafikFragment"
         android:label="@string/menu_grafik"
@@ -37,8 +49,8 @@
 
     <fragment
         android:id="@+id/nav_pengaturan"
-        android:name="com.example.toko.ui.pengaturan.PengaturanFragment"
+        android:name="com.example.toko.ui.pengaturan.PengaturanFragmentPreference"
         android:label="@string/menu_pengaturan"
-        tools:layout="@layout/f_pengaturan" />
+         />
 
 </navigation>

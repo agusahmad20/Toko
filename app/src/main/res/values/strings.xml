@@ -13,11 +13,38 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+    <!-- Navigation Titles -->
     <string name="menu_home">Beranda</string>
     <string name="menu_transaksi">Transaksi</string>
     <string name="menu_riwayat">Riwayat Transaksi</string>
-    <string name="menu_pengaturan">Pengaturan</string>
+    <string name="menu_barang">Barang</string>
+    <string name="menu_pegawai">Pegawai</string>
     <string name="menu_grafik">Grafik Penjualan</string>
     <string name="menu_laporan">Laporan</string>
+    <string name="menu_pengaturan">Pengaturan</string>
+    <string name="title_activity_setting">Setting</string>
+
+    <!-- Preference Titles -->
+    <string name="akun">Akun</string>
+    <string name="pembayaran">Pembayaran Digital</string>
+    <string name="print">Print</string>
+    <string name="keluar">Keluar</string>
+
+    <string name="uname">Ganti Username</string>
+    <string name="pass">Ganti Kata Sandi</string>
+
+    <string name="bayar">Kelola Pembayaran Digital</string>
+
+    <string name="bluetooth">Bluetooth</string>
+    <string name="printer">Printer</string>
+    <string name="struk">Atur Struk</string>
+
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
 
 </resources>

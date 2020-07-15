@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.example.toko.R;
 
@@ -20,7 +20,7 @@ public class GrafikFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         grafikViewModel =
-                ViewModelProviders.of(this).get(GrafikViewModel.class);
+                new ViewModelProvider(this).get(GrafikViewModel.class);
         View root = inflater.inflate(R.layout.f_grafik, container, false);
         final TextView textView = root.findViewById(R.id.text_grafik);
 
