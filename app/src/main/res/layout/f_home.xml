@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,15 +13,26 @@
         android:orientation="vertical">
 
         <RelativeLayout
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:padding="10dp"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#dddddd">
-
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:padding="10dp"
+            android:background="@drawable/btn_rounded"
+            android:backgroundTint="#eeeeee">
+            <ImageView
+                android:id="@+id/i1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/ic_store"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_marginEnd="10dp"/>
             <TextView
                 android:id="@+id/t1"
+                android:layout_toEndOf="@id/i1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Penjualan"
@@ -29,6 +41,7 @@
 
             <TextView
                 android:layout_below="@id/t1"
+                android:layout_alignStart="@id/t1"
                 android:id="@+id/bulan"
                 android:layout_width="wrap_content"
 
@@ -40,6 +53,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/total"
                 android:layout_alignParentEnd="true"
+
                 android:layout_centerVertical="true"
                 android:layout_marginStart="30dp"
                 android:textAlignment="textEnd"
@@ -50,19 +64,31 @@
                 />
         </RelativeLayout>
 
-        <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:padding="10dp"
+            android:background="@drawable/btn_rounded"
+            android:backgroundTint="#eeeeee"
+            >
+
+            <GridView
+                android:id="@+id/gridview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:verticalSpacing="10dp"
+                android:horizontalSpacing="10dp"
+                android:stretchMode="columnWidth"
+                android:gravity="center">
+
+            </GridView>
+
+        </GridLayout>
+
 
     </LinearLayout>
 

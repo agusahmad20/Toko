@@ -15,6 +15,7 @@ public class Preferences {
     public Preferences(Context context){
         sp = context.getSharedPreferences(USER, Context.MODE_PRIVATE);
         spEditor = sp.edit();
+        spEditor.apply();
 
     }
 
@@ -34,12 +35,12 @@ public class Preferences {
     }
 
     public String getNama(){
-        return sp.getString(NAMA, "");
+        return sp.getString(Preferences.NAMA, "");
     }
     public String getJabatan(){
-        return sp.getString(JABATAN, "");
+        return sp.getString(Preferences.JABATAN, "");
     }
     public Boolean getLogged(){
-        return sp.getBoolean(LOGGED, false);
+        return sp.getBoolean(Preferences.LOGGED, false);
     }
 }
